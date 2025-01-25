@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eaf7f5; /* Brighter background */
+        }
+
+        header {
+            background-color: #007acc;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            text-align: center;
+            padding: 50px;
+        }
+
+        .category-button {
+            background: linear-gradient(to right, #ff7eb3, #ff758f); /* Brighter gradient */
+            color: white;
+            padding: 15px 32px;
+            margin: 10px;
+            text-align: center;
+            font-size: 18px; /* Slightly larger font */
+            cursor: pointer;
+            border-radius: 10px;
+            border: none;
+            display: inline-block;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s; /* Hover animation */
+        }
+
+        /* Hover Effects */
+        .category-button:hover {
+            transform: scale(1.1); /* Slight zoom on hover */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
+        }
+
+        @media (max-width: 768px) {
+            .category-button {
+                font-size: 16px;
+                padding: 12px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Donation Categories</h1>
+    </header>
+    <main>
+        <p style="font-size: 18px; color: #333;">Select the category that best describes you:</p>
+        <a href="individual.html" class="category-button">Individual</a>
+        <a href="Group.html" class="category-button">Group</a>
+        <a href="Company.html" class="category-button">Company</a>
+        <a href="Goverment.html" class="category-button">Government</a>
+    </main>
+</body>
+</html>

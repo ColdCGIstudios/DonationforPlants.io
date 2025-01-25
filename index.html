@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate for Plants</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      overflow: hidden;
+    }
+
+    /* Video Background */
+    .video-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1; /* Place behind content */
+    }
+
+    .video-container video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: blur(4px); /* Slight blur for readability */
+      transition: filter 0.5s ease;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero {
+      position: relative;
+      width: 100%;
+      height: calc(100vh - 80px); /* Adjust for header */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+      margin-bottom: 30px;
+    }
+
+    .animated-button {
+      background: linear-gradient(to right, #0a55b9, #00a9ec, #00ffcc, #00ff99d4);
+      background-size: 400% 100%;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      animation: gradientChange 10s infinite alternate, pulse 2s infinite;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .animated-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    @keyframes gradientChange {
+      0% {
+        background-position: 0% 50%;
+      }
+      100% {
+        background-position: 100% 50%;
+      }
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 20px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Video Background -->
+  <div class="video-container">
+    <video id="background-video" src="c:\Users\hp\OneDrive\Desktop\Time_Lapse.mp4" muted autoplay loop></video>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <h1>Donate for Plants</h1>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h2>Let's Grow a Greener Future</h2>
+    <p>Your donation will help plant trees and restore our planet.</p>
+    <button class="animated-button" id="donate-button">Donate Now</button>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 Donate for Plants. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const video = document.getElementById('background-video');
+    const donateButton = document.getElementById('donate-button');
+
+    donateButton.addEventListener('click', () => {
+      // Play the video at 6x speed
+      video.playbackRate = 6;
+
+      // Open the new page
+      window.open('categories.html', '_blank');
+    });
+  </script>
+</body>
+</html>
